@@ -20,7 +20,7 @@ int substract(int num1, int num2) {
 
 int multiply(int num1, int num2) {
     int result = 0;
-    for(int i=0; i<num2; i++) result = add(result + num1);
+    for(int i=0; i<num2; i++) result = add(result, num1);
    
     return result;
 }
