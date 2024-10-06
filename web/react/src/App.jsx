@@ -1,9 +1,17 @@
-import { Header as Head } from "./Header"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { routes } from "./routes";
+import { Layout } from "./layout";
 
-export function App(){
-    return <>
-        <div>
-            <p>Your header is <Head title="My Header"/></p>
-        </div>
+export function App() {
+  const router = createBrowserRouter(routes);
+
+  return (
+    <>
+      <Layout prop1="value1">
+        <main>
+          <RouterProvider router={router}></RouterProvider>
+        </main>
+      </Layout>
     </>
+  );
 }
